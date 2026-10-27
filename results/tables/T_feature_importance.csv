@@ -1,0 +1,14 @@
+feature,mean |SHAP value|
+vru_share,2.6144
+nir_std,0.4099
+nir_mean,0.3319
+drivable_share,0.3294
+rgb_std,0.2962
+n_classes_present,0.2542
+rgb_nir_corr,0.2048
+n_vru_regions,0.2007
+n_objects,0.1995
+rgb_mean,0.1398
+is_fog,0.0435
+is_lowlight,0.0312
+is_snow,0.0107

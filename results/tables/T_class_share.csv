@@ -1,0 +1,27 @@
+class,pixel_share_pct
+sky,34.8036
+vegetation,26.4751
+road,17.5354
+obs-str-bar-fallback,4.7528
+car,3.776
+building,2.1458
+drivable fallback,1.4288
+curb,1.1325
+bridge,1.049
+vehicle fallback,1.0412
+pole,0.8863
+truck,0.6985
+non drivable fallback,0.6044
+billboard,0.594
+bus,0.5536
+person,0.4102
+autorickshaw,0.3822
+wall,0.3776
+guard rail,0.3727
+motorcycle,0.2718
+rider,0.2546
+traffic sign,0.2028
+sidewalk,0.1273
+fence,0.113
+traffic light,0.0074
+bicycle,0.0034

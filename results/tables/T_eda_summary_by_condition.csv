@@ -1,0 +1,5 @@
+condition,images,sequences,rgb_brightness,rgb_contrast,nir_brightness,nir_contrast,rgb_nir_corr,classes_per_image,objects_per_image,pct_images_with_vru,vru_pixel_share_pct,drivable_share_pct
+RAIN,1145,36,119.135,77.12,51.615,37.133,0.88,14.493,60.548,81.048,0.647,24.957
+FOG,1166,47,128.361,70.73,48.521,26.935,0.977,12.956,50.819,53.688,0.244,19.891
+LOWLIGHT,778,59,73.83,58.6,29.058,19.492,0.925,12.842,47.902,62.982,0.581,17.601
+SNOW,752,19,99.017,70.162,41.541,30.435,0.72,10.371,52.495,78.723,1.432,9.809

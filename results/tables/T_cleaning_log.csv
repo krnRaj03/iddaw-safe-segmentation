@@ -1,0 +1,10 @@
+Issue,Variables affected,Detection method,Count,Treatment applied,Rationale
+Missing partner file,rgb/nir/label file,File matching in step 0,1,Excluded,NIR file without RGB partner: train/LOWLIGHT/nir/175/00000028_nir.png
+Missing or unreadable files,"rgb, nir, mask",File check and decode,0,Excluded if any,Every pair must have all three files
+Missing values (table),per-image statistics,isna() count,0,None needed,Statistics are computed for every image
+Unlabelled pixels,mask,Share of pixels = 255,"mean 0.016%, max 5.34%",Kept; ignored in loss and metrics,Standard practice; too few to bias results
+Exact duplicates,rgb image,MD5 hash of the original file,64 (1.6%) in 38 groups,Removed (first copy kept),"Repeated frames inflate counts; 0 groups cross train/val, 2 groups cross weather folders"
+Near-duplicate frames,rgb image,"dHash, Hamming distance <= 2",46 pairs within a sequence; 0 confirmed across sequences (36 hash matches rejected),Kept; cross-sequence matches put in the same split group,Consecutive video frames are naturally similar; grouping prevents leakage
+Outliers: brightness,rgb_mean,3 x IQR within each condition,0 (0.0%),Kept and flagged,Very dark or bright frames are genuine adverse-weather cases the model must handle
+Outliers: object count,n_objects,3 x IQR,8 (0.2%),Kept and flagged,Crowded scenes are real and important for safety
+Deleted annotation shapes,label polygons,deleted flag in JSON,6273 shapes,Ignored when drawing masks,Marked as deleted by annotators

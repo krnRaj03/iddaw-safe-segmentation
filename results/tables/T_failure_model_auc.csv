@@ -1,0 +1,3 @@
+model,CV ROC AUC (grouped 5-fold),n_images,miss_rate
+LightGBM,0.818,751,0.177
+Logistic regression,0.685,751,0.177

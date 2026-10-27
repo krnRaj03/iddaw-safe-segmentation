@@ -1,0 +1,15 @@
+RQ,comparison,test,statistic,p_value,effect
+RQ1,"gap (mIoU - SmIoU) across 4 conditions, Model 1",Kruskal-Wallis,22.6594,0.0,"mean gap by condition: Rain 9.11, Fog 7.70, Low light 8.84, Snow 10.11"
+RQ1,pairwise gap Rain vs Fog,Mann-Whitney U (Holm),,0.0037,
+RQ1,pairwise gap Rain vs Low light,Mann-Whitney U (Holm),,0.4744,
+RQ1,pairwise gap Rain vs Snow,Mann-Whitney U (Holm),,0.3126,
+RQ1,pairwise gap Fog vs Low light,Mann-Whitney U (Holm),,0.035,
+RQ1,pairwise gap Fog vs Snow,Mann-Whitney U (Holm),,0.0001,
+RQ1,pairwise gap Low light vs Snow,Mann-Whitney U (Holm),,0.1309,
+RQ2,"M2 - M1 per-image mIoU, Rain",Wilcoxon signed-rank (Holm),,0.0014,"mean diff 0.51 pts [95% CI 0.26, 0.74]"
+RQ2,"M2 - M1 per-image mIoU, Fog",Wilcoxon signed-rank (Holm),,0.005,"mean diff 0.28 pts [95% CI 0.02, 0.55]"
+RQ2,"M2 - M1 per-image mIoU, Low light",Wilcoxon signed-rank (Holm),,0.0028,"mean diff 0.58 pts [95% CI 0.21, 0.95]"
+RQ2,"M2 - M1 per-image mIoU, Snow",Wilcoxon signed-rank (Holm),,0.4585,"mean diff 0.26 pts [95% CI -0.12, 0.65]"
+RQ3,M3 - M1 per-image SmIoU (superiority),"Wilcoxon signed-rank, one-sided, alpha 0.025",,0.9434,"mean diff -0.16 pts [95% CI -0.32, 0.00]"
+RQ3,"M3 - M1 per-image mIoU (non-inferiority, margin 0.01)","One-sided t-test vs -0.01, alpha 0.025",,0.0,mean diff -0.09 pts; lower bound -0.21 (pass if > -1.00)
+RQ4,dangerous misses: M1 vs M2 RGB+NIR + CE (751 images with VRU),McNemar exact,,0.7608,"miss rate 17.7% vs 17.3%; discordant b=23, c=20"
